@@ -1,40 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* =========================
-     1. APPLIQUER LE THÈME SAUVÉ
-     ========================= */
+  /* 1. APPLIQUER LE THÈME SAUVÉ */
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "dark") {
     document.body.classList.add("dark");
   }
 
-  /* =========================
-     2. OBSERVER LE DOM POUR LA NAVBAR
-     (car elle est chargée via fetch)
-     ========================= */
+  /* 2. OBSERVER LE DOM POUR LES BOUTONS (navbar chargée via fetch) */
   const observer = new MutationObserver(() => {
-    const toggle = document.getElementById("themeToggle");
-    if (!toggle) return;
 
-    const icon = toggle.querySelector("i");
+    // Sélectionner tous les boutons de thème (desktop + mobile)
+    const toggles = document.querySelectorAll("#themeToggle, #themeToggleMobile");
+    if (!toggles.length) return;
 
-    // Icône correcte au chargement
-    if (document.body.classList.contains("dark")) {
-      icon.classList.replace("bi-moon-stars", "bi-sun");
-    }
+    toggles.forEach(toggle => {
+      const icon = toggle.querySelector("i");
 
-    // Clic sur le bouton
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
+      // Icône correcte au chargement
+      if (document.body.classList.contains("dark")) {
+        if(icon) icon.classList.replace("bi-moon-stars", "bi-sun");
+      }
 
-      const isDark = document.body.classList.contains("dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
+      // Ajouter l'événement clic
+      toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        const isDark = document.body.classList.contains("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
 
-      icon.classList.toggle("bi-moon-stars", !isDark);
-      icon.classList.toggle("bi-sun", isDark);
+        // Mettre à jour toutes les icônes en même temps
+        toggles.forEach(t => {
+          const ic = t.querySelector("i");
+          if(ic){
+            ic.classList.toggle("bi-moon-stars", !isDark);
+            ic.classList.toggle("bi-sun", isDark);
+          }
+        });
+      });
     });
 
-    observer.disconnect(); // On arrête l'observation après initialisation
+    observer.disconnect(); // stop observer après initialisation
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
