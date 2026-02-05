@@ -1,17 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-  <div class="container font-edu">
+  <div class="container font-edu d-flex align-items-center">
 
     <!-- Logo / Nom -->
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
+    <a class="navbar-brand d-flex align-items-center me-auto" href="index.html">
       <img src="./assets/images/favore2.png" alt="Logo École Excellence" height="40" class="me-2">
       <span class="fw-bold">École Mont</span>
     </a>
-          <!-- bouton du theme -->
-       
-           <button id="themeToggle" class="btn btn-outline-light btn-sm">
-               <i class="bi bi-moon-stars"></i>
-           </button>
-       
+
+    <!-- Bouton thème (desktop uniquement) -->
+    <button id="themeToggle" class="btn btn-outline-light btn-sm d-none d-lg-inline me-2">
+      <i class="bi bi-moon-stars"></i>
+    </button>
+
     <!-- Bouton mobile -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -20,6 +20,13 @@
     <!-- Menu -->
     <div class="collapse navbar-collapse" id="mainMenu">
       <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <!-- Desktop + Mobile : Bouton thème mobile inclus -->
+        <li class="nav-item d-lg-none mt-2 mb-2">
+          <button id="themeToggleMobile" class="btn btn-outline-primary w-100">
+            <i class="bi bi-moon-stars me-1"></i> Mode sombre
+          </button>
+        </li>
 
         <!-- Accueil & Présentation -->
         <li class="nav-item">
@@ -56,17 +63,18 @@
           </ul>
         </li>
 
-        <!-- Contact & Inscription -->
+        <!-- Contact & Aide -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
             <i class="bi bi-chat-left-dots me-1"></i> Contact
           </a>
           <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="contact.html"><i class="bi bi-telephone-outbound me-1"></i> Contact</a></li>
-              <li><a class="dropdown-item" href="aide.html"><i class="bi bi-bell me-1"></i> Aide</a></li>
+            <li><a class="dropdown-item" href="contact.html"><i class="bi bi-telephone-outbound me-1"></i> Contact</a></li>
+            <li><a class="dropdown-item" href="aide.html"><i class="bi bi-bell me-1"></i> Aide</a></li>
           </ul>
         </li>
-          <!-- boutont d'inscription -->
+
+        <!-- Bouton inscription -->
         <li class="nav-item ms-lg-3">
           <a class="btn btn-warning fw-bold px-3 d-flex align-items-center" href="inscription.html">
             <i class="bi bi-pencil-square me-1"></i> Inscription
