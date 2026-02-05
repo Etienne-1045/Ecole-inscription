@@ -1,0 +1,88 @@
+/* le mode sombre avec le mode jour dans la navbar,le footer, le formulaire... */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark .form-control,
+body.dark .form-select,
+body.dark textarea {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border-color: #333;
+}
+
+body.dark .form-control::placeholder {
+  color: #aaaaaa;
+}
+body.dark .bg-primary {
+  background-color: #0b1c2d !important;
+  color: #eaeaea;
+}
+:root {
+  --nav-bg: #0d6efd;
+  --nav-text: #ffffff;
+}
+body.dark {
+  --nav-bg: #0b1c2d;
+  --nav-text: #eaeaea;
+}
+.navbar {
+  background-color: var(--nav-bg) !important;
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: var(--nav-text) !important;
+}
+/* les classes prédefinie css en vu de completé bootstrap */
+
+/* Couleurs pour le texte */
+.c-red       { color: red; }
+.c-blue      { color: blue; }
+.c-green     { color: green; }
+.c-yellow    { color: yellow; }
+.c-orange    { color: orange; }
+.c-purple    { color: purple; }
+.c-pink      { color: pink; }
+.c-cyan      { color: cyan; }
+.c-teal      { color: teal; }
+.c-brown     { color: brown; }
+.c-gray      { color: gray; }
+.c-lightgray { color: lightgray; }
+.c-darkgray  { color: darkgray; }
+.c-lime      { color: lime; }
+.c-violet    { color: violet; }
+
+/* Couleurs pour le fond */
+.bg-red       { background-color: red; }
+.bg-blue      { background-color: blue; }
+.bg-green     { background-color: green; }
+.bg-yellow    { background-color: yellow; }
+.bg-orange    { background-color: orange; }
+.bg-purple    { background-color: purple; }
+.bg-pink      { background-color: pink; }
+.bg-cyan      { background-color: cyan; }
+.bg-teal      { background-color: teal; }
+.bg-brown     { background-color: brown; }
+.bg-gray      { background-color: gray; }
+.bg-lightgray { background-color: lightgray; }
+.bg-darkgray  { background-color: darkgray; }
+.bg-lime      { background-color: lime; }
+.bg-violet    { background-color: violet; }
+
+/* POLICES PRÉDÉFINIES*/
+.font-ui {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+.font-web {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.font-title {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  font-weight: 600;
+}
+.font-edu {
+  font-family: "Times New Roman", Times, serif;
+}
+.font-mono {
+  font-family: "Courier New", Courier, monospace;
+}

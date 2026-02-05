@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription</title>
+  <link rel="icon" type="image/png" href="./assets/images/favore2.png">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/effets.css">
+</head>
+<body>
+<div id="navbar"></div>
+
+<main class="container font-edu">
+  <!-- Carte du formulaire -->
+  <div class="card mt-4 inscription-card">
+    <div class="card-body">
+
+      <h1 class="mb-4 inscription-title">Formulaire d'inscription</h1>
+
+      <form class="row g-3">
+        <!-- RENSEIGNEMENTS TUTEUR -->
+        <h5 class="mt-4 inscription-section">Renseignement Tuteur</h5>
+        <div class="col-md-6">
+          <label class="form-label">Nom</label>
+          <input type="text" class="form-control inscription-input" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Post-Nom</label>
+          <input type="text" class="form-control inscription-input" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Prénom</label>
+          <input type="text" class="form-control inscription-input" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Téléphone</label>
+          <input type="text" class="form-control inscription-input" required>
+        </div>
+
+        <div class="col-12">
+          <label class="form-label">Adresse Tuteur</label>
+          <input type="text" class="form-control inscription-input" required>
+        </div>
+
+        <!-- RENSEIGNEMENTS ÉLÈVE -->
+        <h5 class="mt-4 inscription-section">Renseignement Élève</h5>
+
+        <div class="col-md-6">
+          <label class="form-label inscription-label">Nom</label>
+          <input type="text" class="form-control inscription-input" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label inscription-label">Post-Nom</label>
+          <input type="text" class="form-control inscription-input" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label inscription-label">Prénom</label>
+          <input type="text" class="form-control inscription-input" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label inscription-label">Date de naissance</label>
+          <input type="date" class="form-control inscription-input" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label inscription-label">Sexe</label>
+          <select class="form-select inscription-select" required>
+            <option value="">Sélectionnez</option>
+            <option>M</option>
+            <option>F</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label inscription-label">Adresse Élève</label>
+          <textarea class="form-control adresse-eleve inscription-textarea" rows="1" required></textarea>
+        </div>
+
+        <!-- CLASSE & ANNÉE -->
+        <h5 class="mt-4 inscription-section">Classe et année scolaire</h5>
+
+        <div class="col-md-6">
+          <label class="form-label inscription-label">Option choisie</label>
+          <select class="form-select inscription-select" required>
+            <option>-- choisir une option --</option>
+
+            <optgroup label="Maternelle">
+              <option>1ère Maternelle</option>
+              <option>2ème Maternelle</option>
+              <option>3ème Maternelle</option>
+            </optgroup>
+
+            <optgroup label="Primaire">
+              <option>1ère Primaire</option>
+              <option>2ème Primaire</option>
+              <option>3ème Primaire</option>
+              <option>4ème Primaire</option>
+            </optgroup>
+
+            <optgroup label="Secondaire">
+              <option>7ème Secondaire</option>
+              <option>8ème Secondaire</option>
+            </optgroup>
+
+            <optgroup label="Humanités">
+              <option>1ère Scientifique</option>
+              <option>2ème Scientifique</option>
+              <option>1ère Littéraire</option>
+              <option>2ème Littéraire</option>
+              <option>1ère Pédagogie</option>
+              <option>2ème Pédagogie</option>
+              <option>1ère Commerciale</option>
+              <option>2ème Commerciale</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label inscription-label">Année scolaire</label>
+          <input type="text" class="form-control inscription-input" value="2025-2026" required>
+        </div>
+
+        <!-- BOUTON -->
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary btn-lg w-100 mt-3 inscription-btn">
+            Envoyer
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+
+<div id="footer"></div>
+<script src="./assets/script/layout.js"></script>
+<script src="./assets/script/bootstrap.bundle.min.js"></script>
+<script src="./assets/script/theme.js"></script>
+</body>
+</html>

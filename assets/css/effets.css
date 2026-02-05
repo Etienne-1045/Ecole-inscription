@@ -1,0 +1,160 @@
+/* IMAGES */
+/* Image responsive propre */
+.img-fit {width: 100%;height: auto;display: block;}
+/* Image cadrée */
+.img-cover {width: 100%;height: 100%;object-fit: cover;}
+.gallery-img {width: 100%;aspect-ratio: 4 / 3;object-fit: cover;border-radius: 6px;}
+/* Image arrondie */
+.img-round-sm { border-radius: 6px; }
+.img-round-md { border-radius: 12px; }
+.img-round-lg { border-radius: 20px; }
+.img-circle   { border-radius: 50%; }
+/* Hover image */
+.img-hover {transition: transform 0.3s ease, filter 0.3s ease;}
+.img-hover:hover {transform: scale(1.05);filter: brightness(1.1);}
+
+/* CARDS */
+.card-base {border-radius: 14px;background-color: #ffffff;transition: transform 0.3s ease, box-shadow 0.3s ease;}
+.card:hover {transform: translateY(-5px);box-shadow: 0 8px 20px rgba(0,0,0,0.15);transition: 0.3s;}
+/*CARDS COLORÉES (GALERIE NORMALE) */
+.gallery-card {transition: 0.3s;border: none;}
+.gallery-card:hover {transform: translateY(-5px);box-shadow: 0 8px 20px rgba(0,0,0,0.15);}
+.section-title {font-size: 1.7rem;font-weight: bold;margin-bottom: 1.5rem;}
+.event-meta {font-size: 0.9rem;color: #666;margin-bottom: 1rem;}
+
+/* Ombres */
+.card-shadow-sm {box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
+.card-shadow-md {box-shadow: 0 6px 15px rgba(0,0,0,0.15);}
+.card-shadow-lg {box-shadow: 0 12px 30px rgba(0,0,0,0.2);}
+
+/* Hover */
+.card-hover-up:hover {transform: translateY(-6px);}
+.card-hover-scale:hover {transform: scale(1.04);}
+/* Effet hover sur toutes les cartes */
+.section-title {margin-top: 2rem;margin-bottom: 1rem; font-weight: bold;}
+
+/* FORMULAIRES */
+.form-box {border-radius: 14px;padding: 30px;}
+
+/* Champs */
+.input-base {border-radius: 8px;padding: 10px;}
+
+/* Focus */
+.input-base:focus {outline: none;box-shadow: 0 0 0 2px rgba(0,0,0,0.15);}
+
+/* Textarea confortable */
+.textarea-lg {min-height: 90px;}
+
+/* Labels */
+.label-strong {font-weight: 600;}
+
+/* BOUTONS */
+.btn-base {border-radius: 10px;font-weight: 600;transition: all 0.25s ease;}
+
+/* Hover effets */
+.btn-scale:hover {transform: scale(1.08);}
+.btn-shadow:hover {box-shadow: 0 8px 18px rgba(0,0,0,0.25);}
+.btn-fade:hover {opacity: 0.85;}
+
+/* LISTES */
+.list-clean {list-style: none;padding: 0;margin: 0;}
+.list-space li {margin-bottom: 8px;}
+.list-inline {display: flex;gap: 12px;}
+
+/* Liste avec icône */
+.list-icon li {display: flex;align-items: center;gap: 8px;}
+
+/* EFFETS & ANIMATIONS */
+.transition {transition: all 0.3s ease;}
+
+/* Apparition */
+.fade-up {opacity: 0;transform: translateY(20px);animation: fadeUp 0.8s forwards;}
+@keyframes fadeUp {
+  to {opacity: 1;transform: translateY(0);}
+}
+
+/* Rotation légère */
+.hover-rotate:hover {transform: rotate(2deg);}
+
+/* ALIGNEMENT */
+.flex-center {display: flex;justify-content: center;align-items: center;}
+.flex-between {display: flex;justify-content: space-between;align-items: center;}
+.flex-col {display: flex;flex-direction: column;}
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+.text-left   { text-align: left; }
+
+/* DARK MODE ADAPTATION */
+body.dark {
+  /* Surfaces neutres */
+  --surface-bg: #1e1e1e;
+  --surface-border: #2a2a2a;
+  --surface-text: #e0e0e0;
+  /* Inputs */
+  --input-bg: #1c1c1c;
+  --input-border: #333;
+  --input-text: #ffffff;
+}
+
+/* CARDS EN DARK */
+body.dark .card-base {
+  background-color: var(--surface-bg);
+  color: var(--surface-text);
+  border: 1px solid var(--surface-border);
+}
+
+/* FORMULAIRES EN DARK */
+
+body.dark .input-base,
+body.dark textarea,
+body.dark select {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border-color: var(--input-border);}
+
+body.dark .input-base::placeholder,
+body.dark textarea::placeholder {color: #aaaaaa;}
+
+/* FORM BOX EN DARK */
+body.dark .form-box {background-color: var(--surface-bg);color: var(--surface-text);}
+/* IMAGES (OPTIONNEL) */
+body.dark .img-hover:hover {filter: brightness(1.05);}
+
+/* effet formulaire */
+.inscription-card {border-radius: 14px;padding: 30px;}
+.inscription-title {text-align: center;font-weight: 700;margin-bottom: 30px;}
+.inscription-section {margin-top: 30px;margin-bottom: 10px;font-weight: 600;color: #0d6efd;}
+.inscription-label {font-weight: 500;}
+.inscription-input,.inscription-select,.inscription-textarea {border-radius: 8px;}
+/* Adresse élève plus confortable sur mobile */
+@media (max-width: 576px) {.inscription-textarea {min-height: 90px;}}
+.inscription-btn {font-weight: 600;border-radius: 10px;}
+
+/* effet index */
+body {padding-top: 70px;}
+
+/* Effets hover sur tous les boutons dans la page contact */
+.btn:hover {opacity: 0.85;transform: translateY(-2px);transition: 0.2s;}
+
+/* effets dans la page classes */
+.card:hover {transform: translateY(-5px);box-shadow: 0 8px 20px rgba(0,0,0,0.15);transition: 0.3s;}
+.section-title {margin-top: 2rem;margin-bottom: 1rem;font-weight: bold;}
+.my-btn { background-color: #ffdd57; color: #000; }
+
+/* effets dans la page actualites */
+.actu-section {margin-bottom: 4rem; display: flex; flex-wrap: wrap; align-items: center;}
+.actu-image {flex: 1 1 40%; cursor: pointer; max-width: 400px; margin-right: 2rem; object-fit: cover; aspect-ratio: 4/3; border-radius: 5px;}
+.actu-content {flex: 1 1 55%;}
+.actu-title {font-weight: bold; font-size: 1.5rem; margin-bottom: 0.5rem;}
+.actu-date {font-size: 0.85rem; color: #777; margin-bottom: 1rem;}
+.btn-gallery {background-color: #FFB76B; color: #000; margin-top: 0.5rem;}
+.btn-gallery:hover {background-color: #FFD93D; color: #000;}
+
+
+/* Effet hover sur les cartes  dans la page activites */
+.card:hover {transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); transition: 0.3s;}
+.section-title {margin-top: 3rem; margin-bottom: 1.5rem; font-weight: bold;}
+.btn-custom {background-color: #FFD93D; color: #000;}
+.btn-custom:hover {background-color: #FFC107; color: #fff;}
+/* Images uniformes */
+.card-img-top {object-fit: cover; height: 200px;}

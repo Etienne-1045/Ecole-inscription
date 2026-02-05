@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie</title>
+  <link rel="icon" type="image/png" href="./assets/images/favore2.png">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/effets.css">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<main class="container font-edu mt-3">
+
+  <!-- TITRE PAGE-->
+  <h1 class="mb-4">Galerie</h1>
+  <p class="mb-5">
+    Découvrez en images la vie quotidienne et les événements marquants de l’École Excellence.
+  </p>
+
+  <!--GALERIE GÉNÉRALE (ACTIVITÉS NORMALES) -->
+  <section class="mb-5">
+    <div class="section-title">Vie à l’école</div>
+
+    <div class="row g-4">
+
+      <div class="col-md-4 col-sm-6">
+        <div class="card gallery-card bg-gal-1 h-100">
+          <img src="./assets/images/galerie/image.jpg" class="gallery-img">
+          <div class="card-body">
+            <h6 class="card-title">Notre école</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="card gallery-card bg-gal-2 h-100">
+          <img src="./assets/images/galerie/cours_d'_ecole.jpg" class="gallery-img">
+          <div class="card-body">
+            <h6 class="card-title">Cour de récréation</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="card gallery-card bg-gal-3 h-100">
+          <img src="./assets/images/activites/bibliothèque.png" class="gallery-img">
+          <div class="card-body">
+            <h6 class="card-title">Bibliothèque</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="card gallery-card bg-gal-4 h-100">
+          <img src="./assets/images/activites/salle_informatique.png" class="gallery-img">
+          <div class="card-body">
+            <h6 class="card-title">Salle informatique</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="card gallery-card bg-gal-5 h-100">
+          <img src="./assets/images/galerie/terrain_de_foot.jpg" class="gallery-img">
+          <div class="card-body">
+            <h6 class="card-title">Terrain de sport</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="card gallery-card bg-gal-6 h-100">
+          <img src="./assets/images/galerie/batiment.jpg" class="gallery-img">
+          <div class="card-body">
+            <h6 class="card-title">Bâtiments scolaires</h6>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--GALERIE DES ÉVÉNEMENTS (ACCORDÉON)-->
+  <section>
+    <div class="section-title">Événements & activités</div>
+
+    <div class="accordion" id="galerieAccordion">
+
+      <!-- ÉVÉNEMENT 1 -->
+      <div class="accordion-item" id="event-foot-2026">
+        <h2 class="accordion-header">
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseFoot">
+            Tournoi de football interclasses
+          </button>
+        </h2>
+
+        <div id="collapseFoot" class="accordion-collapse collapse show" data-bs-parent="#galerieAccordion">
+          <div class="accordion-body">
+            <div class="event-meta">Janvier 2026 • École Excellence</div>
+
+            <div class="row g-3">
+              <div class="col-md-4">
+                <img src="./assets/images/activites/sport.jpg" class="gallery-img">
+              </div>
+              <div class="col-md-4">
+                <img src="./assets/images/activites/sport2.png" class="gallery-img">
+              </div>
+              <div class="col-md-4">
+                <img src="./assets/images/activites/terrain.png" class="gallery-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ÉVÉNEMENT 2 -->
+      <div class="accordion-item" id="event-science-2026">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseScience">
+            Atelier scientifique
+          </button>
+        </h2>
+
+        <div id="collapseScience" class="accordion-collapse collapse" data-bs-parent="#galerieAccordion">
+          <div class="accordion-body">
+            <div class="event-meta">Janvier 2026 • Laboratoire scientifique</div>
+
+            <div class="row g-3">
+              <div class="col-md-4">
+                <img src="./assets/images/activites/labo.jpg" class="gallery-img">
+              </div>
+              <div class="col-md-4">
+                <img src="./assets/images/activites/labo2.jpg" class="gallery-img">
+              </div>
+              <div class="col-md-4">
+                <img src="./assets/images/activites/labo3.jpg" class="gallery-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<div id="footer"></div>
+<script src="./assets/script/bootstrap.bundle.min.js"></script>
+<script src="./assets/script/layout.js"></script>
+<script src="./assets/script/theme.js"></script>
+</body>
+</html>
