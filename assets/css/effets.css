@@ -158,3 +158,11 @@ body {padding-top: 70px;}
 .btn-custom:hover {background-color: #FFC107; color: #fff;}
 /* Images uniformes */
 .card-img-top {object-fit: cover; height: 200px;}
+
+/* Quand l'écran est petit, les boutons passent en dessous */
+@media (max-width: 576px) {
+  #themeToggle, .navbar-toggler {
+    margin-top: 5px;
+    margin-left: 0;
+  }
+}
